@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Training Slot Booking Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Vizag Steel Plant Logo">
+        </div>
+        <div class="nav-bar"><h3>Safety Training Slot Booking Form</h3></div>
+        <nav>
+            <a href="page.html"><u>Registration</u></a>
+            <a href="allrecords.php">Your Bookings</a>
+        </nav>
+    </header>
+    <main>
+        <div class="leftbox">
+            <section class="booking-form">
+                <h2>Worker Details</h2>
+                <form method="post" action="insertion.php">
+                    <div class="form-group">
+                        <label for="aadhaar-id"></label>
+                        <input type="text" id="aadhaar-id" name="aadhaar_id" placeholder="Aadhaar-id">
+                        <label for="worker-id"></label>
+                        <input type="text" id="worker-id" name="worker_id" placeholder="Worker-id">
+                    </div>
+                    <div class="form-group">
+                        <label for="worker-name"></label>
+                        <input type="text" id="worker-name" name="worker_name" placeholder="Worker Name">
+                        <label for="worker-phone"></label>
+                        <input type="text" id="worker-phone" name="worker_phone" placeholder="Phone No">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-id"></label>
+                        <input type="text" id="job-id" name="job_id" placeholder="job-id">
+                        <label for="job-id"></label>
+                        <select id="worker-designation" name="worker_designation" placeholder="Worker Designation">
+                            <option value="department">Designation</option>
+                            <option value="designation1">Designation 1</option>
+                            <option value="designation2">Designation 2</option>
+                        </select>
+                        <label for="department"></label>
+                        <select id="department" name="department" placeholder="Department">
+                            <option value="department">Department</option>
+                            <option value="department1">Department 1</option>
+                            <option value="department2">Department 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">    
+                        <label for="slot">Slot Booking (From 16th July to 21st July only)</label>
+                        <br/><input type="date" id="slot" name="slot">
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+            <div class="availslots">
+                <h2>Available Slots</h2>
+                <div class="date">
+                    <div class="datebox">July 1</div>
+                    <div class="datebox">July 2</div>
+                    <div class="datebox">July 3</div>
+                </div>
+            </div>
+        </div>
+        <section class="slot-selection">
+            <h2>Select Slot</h2>
+            <div class="wrapper">
+                <header>
+                  <p class="current-date"></p>
+                  <div class="icons">
+                    <span id="prev" class="material-symbols-rounded"><i class="fa-solid fa-chevron-left"></i></span>
+                    <span id="next" class="material-symbols-rounded"><i class="fa-solid fa-chevron-right"></i></span>
+                  </div>
+                </header>
+                <div class="calendar">
+                  <ul class="weeks">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                  </ul>
+                  <ul class="days"></ul>
+                </div>
+              </div>
+            <button type="button">Book Slot</button>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
